@@ -52,12 +52,9 @@ https://t.me/zaheck
         for (int i = 0; i < inputs.length; i++) {
             // Получаем предсказания сети для каждого обучающего примера.
             double[] prediction = neuralNetwork.predict(inputs[i]);
-            
-            // Округляем предсказанные значения для более простого отображения.
-            double[] roundedPrediction = neuralNetwork.roundOutput(prediction);
 
             System.out.println("Input: " + Arrays.toString(inputs[i]) +
-                    ", Predicted Output: " + Arrays.toString(roundedPrediction) +
+                    ", Predicted Output: " + Arrays.toString(prediction) +
                     ", Target Output: " + Arrays.toString(targetOutputs[i]));
         }
     }
